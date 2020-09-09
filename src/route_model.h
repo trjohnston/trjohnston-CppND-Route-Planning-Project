@@ -26,6 +26,12 @@ class RouteModel : public Model {
         Node(){}
         Node(int idx, RouteModel * search_model, Model::Node node) : Model::Node(node), parent_model(search_model), index(idx) {}
 
+        static bool CompareNodes(const RouteModel::Node* a, const RouteModel::Node* b) {
+            float f_value_a = a->g_value + a->h_value;
+            float f_value_b = b->g_value + b->h_value;
+            return f_value_a > f_value_b;
+        }
+
       private:
         int index;
         Node * FindNeighbor(std::vector<int> node_indices);
