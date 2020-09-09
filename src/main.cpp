@@ -58,11 +58,13 @@ int main(int argc, const char **argv)
     // RoutePlanner object below in place of 10, 10, 90, 90.
     // User's inputs are expected to be a percentage [0,100] of the map image dimensions
     // Verification of user input was not required but would be a nice addition
+    /*
     float start_x = 10.0;
     float start_y = 10.0;
     float end_x = 90.0;
     float end_y = 90.0;
-    /*
+    */
+    float start_x, start_y, end_x, end_y;
     std::cout << "Enter starting location's x-coordinate: ";
     std::cin >> start_x;
     std::cout << "Enter starting location's y-coordinate: ";
@@ -71,7 +73,6 @@ int main(int argc, const char **argv)
     std::cin  >> end_x;
     std::cout << "Enter ending location's y-coordinate: ";
     std::cin  >> end_y;
-    */
 
 
     // Build Model.
